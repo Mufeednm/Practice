@@ -5,7 +5,7 @@ import { IoMdArrowBack } from "react-icons/io";
 import { Link } from 'react-router-dom';
 
 const Addproduct = () => {
-  const {products,setProducts} =useContext(UseeContext)
+  // const {products,setProducts} =useContext(UseeContext)
   
   const navigate = useNavigate()
   const handlesubmit = (e)=>{
