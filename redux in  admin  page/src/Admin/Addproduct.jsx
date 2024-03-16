@@ -3,10 +3,11 @@ import UseeContext from '../Globalcontext/UseConstext'
 import { useNavigate } from 'react-router-dom'
 import { IoMdArrowBack } from "react-icons/io";
 import { Link } from 'react-router-dom';
-
+import { useDispatch,useSelector } from 'react-redux';
 const Addproduct = () => {
-  const {products,setProducts} =useContext(UseeContext)
-  
+  // const {products,setProducts} =useContext(UseeContext)
+
+  // console.log(produscts);
   const navigate = useNavigate()
   const handlesubmit = (e)=>{
     e.preventDefault();

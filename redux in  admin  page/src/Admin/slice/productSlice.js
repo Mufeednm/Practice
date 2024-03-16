@@ -4,11 +4,11 @@ const productSlice = createSlice({
     name : "Products",
     initialState : {value :DummyProducts},
     reducers: {
-        products:(state,action)=>{
+        productADD:(state,action)=>{
             state.value=action.payload
         }
     }
 }
 ) 
-export const {products}=productSlice.actions
+export const {productADD}=productSlice.actions
 export default productSlice.reducer
