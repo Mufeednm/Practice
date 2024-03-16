@@ -1,17 +1,17 @@
 import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
-import UseeContext from '../Globalcontext/UseConstext'
+// import UseeContext from '../Globalcontext/UseConstext'
 import { Link } from 'react-router-dom'
 import { IoMdArrowBack } from "react-icons/io";
 import { useDispatch,useSelector } from 'react-redux';
 const Productedit = () => {
-  const {products,setProducts} =useContext(UseeContext)
+  const {editProducts,seteditProucts} =useContext(null)
   const dispatch = useDispatch()
   const produscts = useSelector((state)=>state.product.value)
   console.log(produscts);
   const removeCart = (id) => {
 
-    setProducts(oldProduct=>(   oldProduct.filter((v) => v.id != id) )
+    seteditProducts(oldProduct=>(   oldProduct.filter((v) => v.id != id) )
       
     )
   };
