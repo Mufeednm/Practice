@@ -4,16 +4,16 @@ import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { IoMdArrowBack } from "react-icons/io";
 import { useDispatch,useSelector } from 'react-redux';
+import { productremove } from './slice/productSlice';
 const Productedit = () => {
-  const {editProducts,seteditProucts} =useContext(null)
-  const dispatch = useDispatch()
+  // const {editProducts,seteditProucts} =useContext(null)
+  const Dispatch = useDispatch()
   const produscts = useSelector((state)=>state.product.value)
-  console.log(produscts);
+  // console.log(produscts);
   const removeCart = (id) => {
-
-    seteditProducts(oldProduct=>(   oldProduct.filter((v) => v.id != id) )
+Dispatch(productremove(id))
       
-    )
+    
   };
   const navigate =useNavigate()
   return (
@@ -25,7 +25,7 @@ const Productedit = () => {
               </Link>
       <h2 className="text-center">Products</h2>
       <div className="grid-cols-1">
-        {products.map((value, index) => {
+        {produscts.map((value, index) => {
           return (
             <div key={index} className="bg-orange-300 p-5 gap-3 m-2">
               <div className="flex justify-between">
@@ -41,7 +41,7 @@ const Productedit = () => {
                 </div>
                 <div className="flex items-center">
                   <button
-                    onClick={() =>navigate(`/Adminproductedit/${value.id}`) }
+                    onClick={() => navigate(`/Adminproductedit/${value.id}`) }
                     className="ml-4 text-amber-200 "
                   >
           Edit
