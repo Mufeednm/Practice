@@ -1,20 +1,24 @@
 import React, { useContext, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import UseeContext from "../Globalcontext/UseConstext";
-
+// import UseeContext from "../Globalcontext/UseConstext";
+import { useDispatch, useSelector } from "react-redux";
+// import { UseDispatch } from "react-redux";
+import { productedit } from "./slice/productSlice";
 const Adminproductedit = () => {
     const navigate =useNavigate( )
-    const {products,setProducts} =useContext(UseeContext)
+    const dispatch = useDispatch()
+    const produscts = useSelector((state)=>state.product.value)
+    // const {products,setProducts} =useContext(UseeContext)
   const handlesubmit = (e) => {
     e.preventDefault();
-    const editproduct =products.map((e) => {
+    const editproduct =produscts.map((e) => {
       let updatetitle = title || e.title;
       let updateprice = price || e.price;
       let updatetype = type || e.type;
       let updateimage = image || e.image;
       if (e.id == id) {
         return{
-            ...products,
+            ...produscts,
             id:e.id,
             title:updatetitle,
             price : updateprice,
@@ -26,8 +30,8 @@ const Adminproductedit = () => {
       }else 
       return e;
     });
-setProducts (editproduct)
-navigate ("/Productedit")
+ dispatch ( productedit (editproduct))
+navigate ("/Productedit");
 
   };
   const [title, setTitle] = useState("");
@@ -35,7 +39,7 @@ navigate ("/Productedit")
   const [price, setPrice] = useState("");
   const [image, setImage] = useState("");
   const { id } = useParams();
-  const find =products.find((e) => e.id == id);
+  const find =produscts.find((e) => e.id == id);
   console.log(find);
   return (
     <div className=" bg-red-400">
