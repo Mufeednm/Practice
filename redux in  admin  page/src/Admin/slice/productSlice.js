@@ -13,11 +13,12 @@ const productSlice = createSlice({
                 state.value.splice(removeitem,1)
              }
 
-             },
-             
+             },  productAdd:(state,action)=>{
+            state.value=action.payload
+             }
         }
     }
 
 ) 
-export const {productedit,productremove}=productSlice.actions
+export const {productedit,productremove,productAdd}=productSlice.actions
 export default productSlice.reducer
