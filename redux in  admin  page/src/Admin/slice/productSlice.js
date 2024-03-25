@@ -8,10 +8,16 @@ const productSlice = createSlice({
             state.value=action.payload
         },
         productremove:(state,action)=>{
-             state.value.filter((value)=>value.id!==action.payload)
+             const removeitem =action.payload;
+             if (removeitem>=0 && removeitem < state.value.length) {
+                state.value.splice(removeitem,1)
+             }
+
+             },
+             
         }
     }
-}
+
 ) 
 export const {productedit,productremove}=productSlice.actions
 export default productSlice.reducer

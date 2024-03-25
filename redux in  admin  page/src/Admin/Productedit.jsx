@@ -10,8 +10,8 @@ const Productedit = () => {
   const Dispatch = useDispatch()
   const produscts = useSelector((state)=>state.product.value)
   // console.log(produscts);
-  const removeCart = (id) => {
-Dispatch(productremove(id))
+  const removeCart = (index) => {
+    Dispatch(productremove(index))
       
     
   };
@@ -49,7 +49,7 @@ Dispatch(productremove(id))
               
                 </div>
                 <button
-                  onClick={() => removeCart(value.id)}
+                  onClick={() => removeCart(index)}
                   className="ml-4 text-red-500"
                 >
                   Remove
