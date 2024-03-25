@@ -6,8 +6,7 @@ import { Link } from 'react-router-dom';
 import { useDispatch,useSelector } from 'react-redux';
 const Addproduct = () => {
   // const {products,setProducts} =useContext(UseeContext)
-  const produscts = useSelector((state)=>state.product.value)
-  const dispatch =useDispatch()
+
   // console.log(produscts);
   const navigate = useNavigate()
   const handlesubmit = (e)=>{
@@ -25,7 +24,7 @@ const Addproduct = () => {
       price : parseFloat(price),
       image: URL.createObjectURL(image)
     };
-    dispatch(productAdd ([...produscts,newProduct]));
+    setProducts ([...products,newProduct]);
     // e.target.reset();
     navigate ("/Productedit")
   }
