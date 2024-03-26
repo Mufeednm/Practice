@@ -4,9 +4,11 @@ import { useNavigate } from 'react-router-dom'
 import { IoMdArrowBack } from "react-icons/io";
 import { Link } from 'react-router-dom';
 import { useDispatch,useSelector } from 'react-redux';
+import { productedit } from './slice/productSlice';
 const Addproduct = () => {
+  const dispatch = useDispatch()
   // const {products,setProducts} =useContext(UseeContext)
-
+  const produscts = useSelector((state)=>state.product.value)
   // console.log(produscts);
   const navigate = useNavigate()
   const handlesubmit = (e)=>{
@@ -24,7 +26,7 @@ const Addproduct = () => {
       price : parseFloat(price),
       image: URL.createObjectURL(image)
     };
-    setProducts ([...products,newProduct]);
+    dispatch(productedit ([...produscts,newProduct]));
     // e.target.reset();
     navigate ("/Productedit")
   }
