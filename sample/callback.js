@@ -1,13 +1,14 @@
-setTimeout(()=>{console.log("timmer")},5000)
-
-abu ()
-
-function abu() {
-    console.log("hello");
+function first(callback) {
+     
+    let data =()=>{    
+        console.log("abu");
+    } 
+        callback (data())
     
 }
 
-// abu( function go() {
-//     console.log("bye");
-    
-// })
+first (    function second() {
+        console.log("babu");
+        
+    }
+    )
