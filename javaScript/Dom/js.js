@@ -1,2 +1,4 @@
-document.getElementById("abu").innerHTML = "vaddaaa"
-var ptag = document.getElementById("aa").innerHTML = "abiiunjds"
+let heading = document.getElementById("head");
+ heading.innerHTML = "hdone"
+ heading.style.backgroundColor = "green"
+console.log(heading);
