@@ -19,4 +19,9 @@ delet.remove()
 console.log(delet);
 
  
- 
+let  anas = document.createElement("p");
+anas .innerHTML = "he is a monkey"
+console.log(anas);
+
+// document.body.appendChild(anas);
+document.body.prepend(anas);
