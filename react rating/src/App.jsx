@@ -7,6 +7,7 @@ function App() {
   const [rating, setrating] = useState(0);
   const [ratings, setratings] = useState(0);
   const [hidden, sethidden] = useState(false);
+  const [pass, setPass] = useState(false);
   const element = [];
   for (let i = 0; i < 5; i++) {
     element.push(i);
@@ -14,7 +15,7 @@ function App() {
 
   return (
     <div>
-      {element.map((index) => (
+      {/* {element.map((index) => (
         <button
           key={index}
           onClick={() => {
@@ -52,12 +53,46 @@ function App() {
           </button>
           <h3>{hidden ? "" : "abu"}</h3>
         </div>
-      </div>
+      </div> */}
+
+
+<button onClick={()=>{
+  setPass(!pass)
+}} style={{  height: "40px",
+            width: 80,
+            backgroundColor : pass ? "blue": "red"}}></button> <br />  <br />
+
+
+<button  onClick={()=>{
+  setPass(!pass)
+}} style={{  height: "40px",
+            width: 80,
+            backgroundColor : pass ? "red": "blue"}} ></button>
     </div>
   );
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // import { useState } from 'react';
 
