@@ -27,13 +27,15 @@ import { useState } from 'react';
 
 function App() {
   const [rating, setRating] = useState(0);
+  const [hidden, sethidden] = useState(false);
+
 
   return (
     <div>
       {[...Array(5)].map((_, index) => (
         <button
           key={index}
-          onClick={() => setRating(index + 1)}
+          onClick={() => setRating(index+1 )}
           style={{
             height: '40px',
             width: '80px',
@@ -42,6 +44,14 @@ function App() {
           }}
         ></button>
       ))}
+<div>
+
+<button onClick={()=>{
+  sethidden(!hidden)
+}} type="button">hide</button>
+   <h3>{hidden? "" : "abu"}</h3>
+</div>
+
     </div>
   );
 }
