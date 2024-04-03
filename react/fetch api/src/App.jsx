@@ -4,34 +4,49 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [postman,setPostmans]=useState([])
+  const [get,setgets]=useState([])
 useEffect(()=>{
 
   let posts =async ()=>{
-   let datas= await fetch ("https://jsonplaceholder.typicode.com/users")
+   let datas= await fetch ("https://api.postalpincode.in/pincode/110001")
    let final = await datas.json()
-  //  setPostmans(final)
-  //  console.log(postman);
-  setPostmans(final)
+  //  setgets(final)
+  //  console.log(get);
+  setgets(final[0].PostOffice)
+
+// console.log( "first",  final);
 }
 posts()
 },[])
-console.log(postman);
+console.log(get);
 
   return (
     
     <div>
     <h1>Data from API:</h1>
     
-      {postman.map((item, index) => (
-        // console.log("hi", item)
-        <table>
-
-          <th>babu</th>
-          <tr>{index} {item.name}</tr>
-          <td></td> 
-        </table>
+        <table border={1}>
+        <thead>
+          <tr>
+            <th scope="col">name</th>
+            
+            <th scope="col"> Delivery Status</th>
+            <th scope="col">BranchType</th>
+            
+                  </tr>
+                </thead>
+      {get.map((item , key) => (
+      
+        <tbody key={key}>
+          <tr>
+            <th scope="row">{item.Name}</th>
+            <td> {item. DeliveryStatus}</td>
+            <td>
+              {item.BranchType}</td>
+          </tr>
+          </tbody>
       ))}
+      </table>
     
   </div>
   )
