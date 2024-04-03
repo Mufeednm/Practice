@@ -26,7 +26,7 @@ console.log(get);
     <h1>Data from API:</h1>
     
         <table border={1}>
-        <thead>
+        {/* <thead> */}
           <tr>
             <th scope="col">name</th>
             
@@ -34,7 +34,7 @@ console.log(get);
             <th scope="col">BranchType</th>
             
                   </tr>
-                </thead>
+                {/* </thead> */}
       {get.map((item , key) => (
       
         <tbody key={key}>
