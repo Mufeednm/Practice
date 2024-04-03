@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div>
-      {/* {element.map((index) => (
+      {element.map((index) => (
         <button
           key={index}
           onClick={() => {
@@ -53,7 +53,7 @@ function App() {
           </button>
           <h3>{hidden ? "" : "abu"}</h3>
         </div>
-      </div> */}
+      </div>
 
 
 <button onClick={()=>{
@@ -68,6 +68,14 @@ function App() {
 }} style={{  height: "40px",
             width: 80,
             backgroundColor : pass ? "red": "blue"}} ></button>
+
+
+<div>
+
+
+
+</div>
+
     </div>
   );
 }

@@ -26,7 +26,13 @@
 
 // // Calling the async function
 // fetchDataAsync();
-
-async function (params) {
-  
+async function demo () {
+    console.log("poddaaa");
+    await  setTimeout (()=>{
+        console.log("mufeed");
+    },2000)
 }
+
+
+demo()
+console.log("poda pulla");
