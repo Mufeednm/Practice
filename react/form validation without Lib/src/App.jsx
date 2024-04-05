@@ -62,22 +62,22 @@ function App() {
         return regex.test(email);
       };
   
-  // const validateform = ()=>{
-  //   const errors = {};
-  //   if (!formdata.Name.trim()) {
-  //           errors.name = 'Name is required';
-  //         }
-  //         if (!formdata.email.trim()) {
-  //           errors.email = 'Email is required';
-  //         } else if (!isValidEmail(formdata.email)) {
-  //           errors.email = 'Invalid email format';
-  //         }
-  //         if (!formdata.password.trim()) {
-  //           errors.password = 'Password is required';
-  //         }
-  //         setErrors(errors);
-  //         return Object.keys (errors).length===0
-  // }
+  const validateform = ()=>{
+    const errors = {};
+    if (!formdata.Name.trim()) {
+            errors.name = 'Name is required';
+          }
+          if (!formdata.email.trim()) {
+            errors.email = 'Email is required';
+          } else if (!isValidEmail(formdata.email)) {
+            errors.email = 'Invalid email format';
+          }
+          if (!formdata.password.trim()) {
+            errors.password = 'Password is required';
+          }
+          setErrors(errors);
+          return Object.keys (errors).length===0
+  }
   
  const handlesubmit = (e)=>{
     e.preventDefault();
