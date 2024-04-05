@@ -109,7 +109,7 @@ onChange={handlechange}
  value={formdata.Name}  
  placeholder='name'
  />
- {errors.name && <div className="error">{errors.name}</div>}
+ {/* {errors.name && <div className="error">{errors.name}</div>} */}
    <br />
 <label >email</label>
 <input 
@@ -120,7 +120,7 @@ onChange={handlechange}
  placeholder='email'
    />
    
- {errors.email && <div className="error">{errors.email}</div>}
+ {/* {errors.email && <div className="error">{errors.email}</div>} */}
    
    <br />
 <label >password</label>
