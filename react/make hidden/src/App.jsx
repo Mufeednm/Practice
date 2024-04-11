@@ -12,7 +12,7 @@ const handleclick = ()=>{
     <div style={{display: 'flex', justifyContent:'center'}}>
       <h2> {toggle? "" : "MUFEED"} </h2> <br />
       
-      <button onClick={handleclick} >Magic</button>
+      <button onClick={handleclick} > {!toggle? "hide" : "show"}</button>
     </div>
     </div>
      
