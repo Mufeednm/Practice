@@ -67,11 +67,11 @@ function App() {
             backgroundColor : pass ? "blue": "red"}}></button> <br />  <br />
 
 
-<button  onClick={()=>{
+{/* <button  onClick={()=>{
   setPass(!pass)
 }} style={{  height: "40px",
             width: 80,
-            backgroundColor : pass ? "red": "blue"}} ></button>
+            backgroundColor : pass ? "red": "blue"}} ></button> */}
 
 
 <div>
