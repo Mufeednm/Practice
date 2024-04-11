@@ -15,7 +15,11 @@ function App() {
 
   return (
     <div>
-      {element.map((index) => (
+      {
+        element
+        // [...Array(5)]
+      .
+      map((index) => (
         <button
           key={index}
           onClick={() => {
