@@ -1,44 +1,4 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-// import './App.css'
 
-// function App() {
-//   const [toggle,Settoggle]= useState(false)
-//   return (
-//     <div>
-//  \<button onClick={()=>{Settoggle(!toggle)}} style={ {backgroundColor :toggle?  "green" : "red"} } >green</button>
-//  <div>
-
-//  \<button  onClick={()=>{Settoggle(!toggle)}}  style={ {backgroundColor : toggle ?   "red"  : "green"} }>red</button>
-//  </div>
- 
-//     </div>
-     
-//   )
-// }
-
-// export default App
-
-// 3 times changer
-
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-// import './App.css'
-
-// function App() {
-//   const [times,settimes]=useState(0)
-//   return (
-//     <div>
-
-// <button   onClick={()=>{settimes (times+1)} }        style={{backgroundColor : times  >= 3  && times % 3 ==0 ? "red": "blue"}}>change color after 3 times </button>
-//     </div>
-     
-//   )
-// }
-
-// export default App
 
 
 
