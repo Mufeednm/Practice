@@ -1,0 +1,9 @@
+        //  map 
+let x = [1,2,3,4,5,6]
+let b = x.map(value => value+1)
+console.log(b);
+
+    //   filter 
+    let  f = x.filter(value => value % 2 == 0)
+    console.log(f);
+    
